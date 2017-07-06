@@ -73,7 +73,12 @@ brew cask install spotify
 brew cask install flux
 brew cask install gpower
 brew cask install github-desktop
+
+
 brew cask install atom
+apm install jumpy multi-cursor-plus
+
+
 brew cask install keka
 brew cask install vlc
 brew cask install mactex
