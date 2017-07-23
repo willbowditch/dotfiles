@@ -75,7 +75,7 @@ brew cask install github-desktop
 
 
 brew cask install atom
-apm install jumpy multi-cursor-plus
+apm install jumpy multi-cursor-plus file-icons
 
 
 brew cask install keka
