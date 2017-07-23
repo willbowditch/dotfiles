@@ -22,7 +22,6 @@ brew install gnu-sed --with-default-names
 # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
 # running `chsh`. To do so, run `sudo chsh -s /usr/local/bin/bash`.
 brew install bash
-brew tap homebrew/versions
 brew install bash-completion2
 
 # Switch to using brew-installed bash as default shell
@@ -38,9 +37,9 @@ brew install wget --with-iri
 
 # Install more recent versions of some macOS tools.
 brew install vim --with-override-system-vi
-brew install homebrew/dupes/grep
-brew install homebrew/dupes/openssh
-brew install homebrew/dupes/screen
+brew install grep
+brew install openssh
+brew install screen
 
 
 # Install other useful binaries.
@@ -82,6 +81,28 @@ apm install jumpy multi-cursor-plus
 brew cask install keka
 brew cask install vlc
 brew cask install mactex
+
+#Setup zsh
+brew install zsh
+brew install zsh-git-prompt
+brew install zsh-autosuggestions
+brew install zsh-completions
+
+brew install fontconfig
+
+CURRENTSHELL=$(dscl . -read /Users/$USER UserShell | awk '{print $2}')
+if [[ "$CURRENTSHELL" != "/usr/local/bin/zsh" ]]; then
+  echo "setting newer homebrew zsh (/usr/local/bin/zsh) as your shell (password required)"
+  # sudo bash -c 'echo "/usr/local/bin/zsh" >> /etc/shells'
+  # chsh -s /usr/local/bin/zsh
+  sudo dscl . -change /Users/$USER UserShell $SHELL /usr/local/bin/zsh > /dev/null 2>&1
+fi
+
+echo "setting up oh-my-zsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+
+
 
 # Remove outdated versions from the cellar.
 brew cleanup
