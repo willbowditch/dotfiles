@@ -1,4 +1,4 @@
-gh#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
