@@ -87,6 +87,7 @@ brew cask install github-desktop
 brew cask install keka
 brew cask install vlc
 brew cask install mactex
+brew cask install slack
 
 #Atom stuff
 echo 'Install atom packages...'
