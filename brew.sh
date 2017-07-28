@@ -56,7 +56,7 @@ brew install ack
 brew install dark-mode
 brew install git
 brew install git-lfs
-brew insall gpg
+brew install gpg
 brew install imagemagick --with-webp
 brew install p7zip
 brew install pigz
