@@ -92,6 +92,7 @@ brew cask install keka
 brew cask install vlc
 brew cask install mactex
 brew cask install slack
+brew cask install cyberduck
 
 #Atom stuff
 echo 'Install atom packages...'
