@@ -97,7 +97,12 @@ brew cask install cyberduck
 #Atom stuff
 echo 'Install atom packages...'
 brew cask install atom
-apm install jumpy multi-cursor-plus
+apm install jumpy
+apm install multi-cursor-plus
+apm install kite
+apm install Hydrogen
+apm install indent-guide-improved
+apm install highlight-selected
 
 
 
