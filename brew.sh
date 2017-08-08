@@ -103,7 +103,7 @@ apm install kite
 apm install Hydrogen
 apm install indent-guide-improved
 apm install highlight-selected
-
+apm install file-icons
 
 
 
