@@ -104,8 +104,18 @@ apm install Hydrogen
 apm install indent-guide-improved
 apm install highlight-selected
 apm install file-icons
-
-
+apm install autocomplete-emojis
+apm install autocomplete-paths
+apm install autocomplete-python
+apm install busy-signal
+apm install hyperclick
+apm install linter
+apm install linter-pycodestyle
+apm install linter-ui-default
+apm install pigments
+apm install python-indent
+apm install python-tools
+apm install script
 
 # Remove outdated versions from the cellar.
 brew cleanup
