@@ -132,3 +132,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# This is autosuggestions
+ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+ #This is completions
+ fpath=(/usr/local/share/zsh-completions $fpath)

@@ -97,25 +97,28 @@ brew cask install cyberduck
 #Atom stuff
 echo 'Install atom packages...'
 brew cask install atom
-apm install jumpy
-apm install multi-cursor-plus
-apm install kite
 apm install Hydrogen
-apm install indent-guide-improved
-apm install highlight-selected
-apm install file-icons
 apm install autocomplete-emojis
 apm install autocomplete-paths
 apm install autocomplete-python
 apm install busy-signal
+apm install file-icons
+apm install highlight-selected
 apm install hyperclick
+apm install indent-guide-improved
+apm install intentions
+apm install jumpy
+apm install language-pug
 apm install linter
 apm install linter-pycodestyle
 apm install linter-ui-default
+apm install multi-cursor-plus
 apm install pigments
 apm install python-indent
 apm install python-tools
 apm install script
+
+
 
 # Remove outdated versions from the cellar.
 brew cleanup
@@ -126,3 +129,6 @@ brew cleanup
 #do this last as it stops the current shell.
 echo 'now installing oh-my-zsh'
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+brew install zsh-autosuggestions
+brew install zsh-completions
