@@ -79,6 +79,9 @@ brew install zopfli
 brew install r
 brew install python
 brew install python3
+brew install jq
+brew install gdal
+brew install geos
 
 #cask programs
 echo 'Install Casks'
@@ -93,23 +96,36 @@ brew cask install vlc
 brew cask install mactex
 brew cask install slack
 brew cask install cyberduck
+brew cask install docker
+brew cask install docker-toolbox
+brew cask install dbeaver-community
+brew cask install iterm2
+brew cask install typora
+brew cask install java
 
 #Atom stuff
 echo 'Install atom packages...'
 brew cask install atom
 apm install Hydrogen
+apm install atom-clock
+apm install atom-jinja2
 apm install autocomplete-emojis
 apm install autocomplete-paths
 apm install autocomplete-python
 apm install busy-signal
+apm install color-tabs
 apm install file-icons
 apm install highlight-selected
 apm install hyperclick
 apm install indent-guide-improved
 apm install intentions
 apm install jumpy
+apm install kite
+apm install language-docker
 apm install language-pug
+apm install language-r
 apm install linter
+apm install linter-lintr
 apm install linter-pycodestyle
 apm install linter-ui-default
 apm install multi-cursor-plus
@@ -118,12 +134,8 @@ apm install python-indent
 apm install python-tools
 apm install script
 
-
-
 # Remove outdated versions from the cellar.
 brew cleanup
-
-
 
 #oh-my-zsh!
 #do this last as it stops the current shell.
