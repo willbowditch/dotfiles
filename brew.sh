@@ -82,6 +82,11 @@ brew install python3
 brew install jq
 brew install gdal
 brew install geos
+brew install openblas
+brew install opencv
+brew install protobuf
+brew install lapack
+brew install pinentry-mac
 
 #cask programs
 echo 'Install Casks'
@@ -90,7 +95,6 @@ brew cask install google-chrome
 brew cask install spotify
 brew cask install flux
 brew cask install gpower
-brew cask install github-desktop
 brew cask install keka
 brew cask install vlc
 brew cask install mactex
@@ -102,17 +106,23 @@ brew cask install dbeaver-community
 brew cask install iterm2
 brew cask install typora
 brew cask install java
+brew cask install time-out
+brew cask install whatsapp
+brew cask install keybase
+brew cask install sourcetree
 
 #Atom stuff
 echo 'Install atom packages...'
 brew cask install atom
 apm install Hydrogen
+apm install atom-beautify
 apm install atom-clock
-apm install atom-jinja2
+apm install atom-jinja
 apm install autocomplete-emojis
 apm install autocomplete-paths
 apm install autocomplete-python
 apm install busy-signal
+apm install color-picker
 apm install color-tabs
 apm install file-icons
 apm install highlight-selected
@@ -120,7 +130,6 @@ apm install hyperclick
 apm install indent-guide-improved
 apm install intentions
 apm install jumpy
-apm install kite
 apm install language-docker
 apm install language-pug
 apm install language-r
@@ -130,9 +139,12 @@ apm install linter-pycodestyle
 apm install linter-ui-default
 apm install multi-cursor-plus
 apm install pigments
+apm install platformio-ide-terminal
 apm install python-indent
 apm install python-tools
 apm install script
+apm install seti-syntax
+apm install seti-ui
 
 # Remove outdated versions from the cellar.
 brew cleanup
@@ -144,3 +156,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 brew install zsh-autosuggestions
 brew install zsh-completions
+
+# Install venv wrapper (doing it here because .zshrc needs it)
+pip3 install virtualenvwrapper

@@ -138,3 +138,20 @@ source $ZSH/oh-my-zsh.sh
 
  #This is completions
  fpath=(/usr/local/share/zsh-completions $fpath)
+
+ # virtualenv wrapper
+ export WORKON_HOME=$HOME/.virtualenvs
+ export PROJECT_HOME=$HOME/Devel
+ export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+ source /usr/local/bin/virtualenvwrapper.sh
+ export PATH="/usr/local/bin:$PATH"
+
+ #test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+ # Setup pinentry for gpg
+ if [ -f ~/.gnupg/.gpg-agent-info ] && [ -n "$(pgrep gpg-agent)" ]; then
+     source ~/.gnupg/.gpg-agent-info
+     export GPG_AGENT_INFO
+ else
+     eval $(gpg-agent --daemon ~/.gnupg/.gpg-agent-info)
+ fi
