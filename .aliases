@@ -140,3 +140,8 @@ alias reload="exec $SHELL -l"
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+
+#pip-updater
+alias pip3-update="pip3 list --format legacy --outdated | sed 's/(.*//g' | xargs -n1 sudo -H pip3 install -U"
+
+alias pyclean="rm **/__pycache__ -r; rm **/.cache -r"

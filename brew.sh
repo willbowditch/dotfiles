@@ -87,6 +87,8 @@ brew install opencv
 brew install protobuf
 brew install lapack
 brew install pinentry-mac
+brew install direnv
+
 
 #cask programs
 echo 'Install Casks'

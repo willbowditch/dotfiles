@@ -155,3 +155,6 @@ source $ZSH/oh-my-zsh.sh
  else
      eval $(gpg-agent --daemon ~/.gnupg/.gpg-agent-info)
  fi
+
+# For direnv
+eval "$(direnv hook zsh)"
