@@ -89,6 +89,9 @@ brew install lapack
 brew install pinentry-mac
 brew install direnv
 
+# Web stuff
+brew install yarn
+
 
 #cask programs
 echo 'Install Casks'
@@ -112,6 +115,9 @@ brew cask install time-out
 brew cask install whatsapp
 brew cask install keybase
 brew cask install sourcetree
+
+# Node stuff
+yarn global add eslint
 
 #Atom stuff
 echo 'Install atom packages...'
@@ -147,6 +153,9 @@ apm install python-tools
 apm install script
 apm install seti-syntax
 apm install seti-ui
+apm install es6-javascript
+apm install atom-ternjs
+apm install linter-eslint
 
 # Remove outdated versions from the cellar.
 brew cleanup
