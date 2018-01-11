@@ -149,11 +149,11 @@ source $ZSH/oh-my-zsh.sh
  #test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
  # Setup pinentry for gpg
- if [ -f ~/.gnupg/.gpg-agent-info ] && [ -n "$(pgrep gpg-agent)" ]; then
-     source ~/.gnupg/.gpg-agent-info
+ if [ -n "$(pgrep gpg-agent)" ]; then
      export GPG_AGENT_INFO
  else
-     eval $(gpg-agent --daemon ~/.gnupg/.gpg-agent-info)
+   eval $(gpg-agent --daemon)
+     # eval $(gpg-agent --daemon ~/.gnupg/.gpg-agent-info)
  fi
 
 # For direnv
