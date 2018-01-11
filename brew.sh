@@ -143,7 +143,8 @@ apm install language-pug
 apm install language-r
 apm install linter
 apm install linter-lintr
-apm install linter-pycodestyle
+# disable this while using ide-python due to conflicts
+#apm install linter-pycodestyle
 apm install linter-ui-default
 apm install multi-cursor-plus
 apm install pigments
@@ -156,6 +157,15 @@ apm install seti-ui
 apm install es6-javascript
 apm install atom-ternjs
 apm install linter-eslint
+apm install python-yapf
+
+# Enables smarter python checks
+apm install atom-ide-ui
+apm install ide-python
+
+# These two go together - magic python needs the extra theme
+apm install MagicPython
+apm install Chromodynamics
 
 # Remove outdated versions from the cellar.
 brew cleanup
