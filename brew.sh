@@ -122,18 +122,20 @@ yarn global add eslint
 #Atom stuff
 echo 'Install atom packages...'
 brew cask install atom
-apm install Hydrogen
 apm install atom-beautify
 apm install atom-clock
 apm install atom-jinja
+apm install atom-ternjs
 apm install autocomplete-emojis
 apm install autocomplete-paths
 apm install autocomplete-python
 apm install busy-signal
 apm install color-picker
 apm install color-tabs
+apm install es6-javascript
 apm install file-icons
 apm install highlight-selected
+apm install Hydrogen
 apm install hyperclick
 apm install indent-guide-improved
 apm install intentions
@@ -142,26 +144,25 @@ apm install language-docker
 apm install language-pug
 apm install language-r
 apm install linter
+apm install linter-eslint
+apm install lister-docker
 apm install linter-lintr
-# disable this while using ide-python due to conflicts
-#apm install linter-pycodestyle
 apm install linter-ui-default
-apm install multi-cursor-plus
+apm install multi-cursor
 apm install pigments
 apm install platformio-ide-terminal
 apm install python-indent
 apm install python-tools
+apm install python-yapf
 apm install script
 apm install seti-syntax
 apm install seti-ui
-apm install es6-javascript
 apm install atom-ternjs
-apm install linter-eslint
-apm install python-yapf
 
 # Enables smarter python checks
 apm install atom-ide-ui
 apm install ide-python
+apm install ide-json
 
 # These two go together - magic python needs the extra theme
 apm install MagicPython
