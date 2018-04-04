@@ -145,3 +145,5 @@ alias path='echo -e ${PATH//:/\\n}'
 alias pip3-update="pip3 list --format legacy --outdated | sed 's/(.*//g' | xargs -n1 sudo -H pip3 install -U"
 
 alias pyclean="rm **/__pycache__ -r; rm **/.cache -r"
+
+alias fuz="fzf --preview 'head -100 {}'"
