@@ -147,3 +147,4 @@ alias pip3-update="pip3 list --format legacy --outdated | sed 's/(.*//g' | xargs
 alias pyclean="rm **/__pycache__ -r; rm **/.cache -r"
 
 alias fuz="fzf --preview 'head -100 {}'"
+alias fuzcon="ggrep --line-buffered --color=never -r '' * | fzf"
