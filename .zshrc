@@ -1,34 +1,54 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Use antigen package man. for zsh
+source /usr/local/share/antigen/antigen.zsh
+
+
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+
+# Bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen bundle git
+antigen bundle heroku
+antigen bundle pip
+antigen bundle lein
+antigen bundle command-not-found
+antigen bundle zsh-users/zsh-history-substring-search
+antigen bundle docker-compose
+antigen bundle docker
+
+# Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# Load the theme.
+antigen theme avit
+
+# Tell Antigen that you're done.
+antigen apply
+
+
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/williambowditch/.oh-my-zsh
+# export ZSH=/Users/williambowditch/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="avit"
+#ZSH_THEME="avit"
 
 
 ##========================= custom from here
 # Path to your oh-my-zsh configuration.
-export ZSH=$HOME/.oh-my-zsh
+# export ZSH=$HOME/.oh-my-zsh
 
 # Directories to be prepended to $PATH
 declare -a dirs_to_prepend
 dirs_to_prepend=(
   "/usr/bin"
-  "/usr/local/sbin"
-  "/usr/local/git/bin"
   "/usr/local/"
-  "/usr/local/mysql/bin"
-  "/sw/bin/"
-  "$HOME/dotfiles/bin"
-  "$HOME/bin"
-  "$HOME/.rvm/bin"
+  "/usr/local/bin/"
   "$(brew --prefix ruby)/bin"
   "$(brew --prefix coreutils)/libexec/gnubin" # Add brew-installed GNU core utilities bin
-  "$(brew --prefix)/share/npm/bin" # Add npm-installed package bin
 )
 
 # Explicitly configured $PATH
@@ -53,9 +73,9 @@ for file in $HOME/.{exports,aliases,functions}; do
 done;
 unset file;
 
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-  . `brew --prefix`/etc/bash_completion
-fi
+# if [ -f `brew --prefix`/etc/bash_completion ]; then
+#   . `brew --prefix`/etc/bash_completion
+# fi
 ##=========================
 
 # Uncomment the following line to use case-sensitive completion.
@@ -100,9 +120,9 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+#plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
+#source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -112,11 +132,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='nano'
+else
+  export EDITOR='nano'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -140,13 +160,18 @@ source $ZSH/oh-my-zsh.sh
  fpath=(/usr/local/share/zsh-completions $fpath)
 
  # virtualenv wrapper
- export WORKON_HOME=$HOME/.virtualenvs
- export PROJECT_HOME=$HOME/Devel
- export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
- source /usr/local/bin/virtualenvwrapper.sh
- export PATH="/usr/local/bin:$PATH"
+ # virtualenvwrapper
+# lazy loading saves on shell startup time
+workon() {
+  [ -z "$PROJECT_HOME" ] && {
+    unset -f workon;
+    export WORKON_HOME=$HOME/.virtualenvs;
+    export PROJECT_HOME=$HOME/projects/;
+    source /usr/local/bin/virtualenvwrapper.sh
+    }
+  workon "$@"
+}
 
- #test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
  # Setup pinentry for gpg
  if [ -n "$(pgrep gpg-agent)" ]; then
@@ -158,3 +183,12 @@ source $ZSH/oh-my-zsh.sh
 
 # For direnv
 eval "$(direnv hook zsh)"
+
+export PATH=/Users/willbowditch/Library/Python/3.6/bin:$PATH
+
+# gclou
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+
+# added by travis gem
+[ -f /Users/willbowditch/.travis/travis.sh ] && source /Users/willbowditch/.travis/travis.sh
