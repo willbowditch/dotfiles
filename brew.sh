@@ -78,6 +78,7 @@ brew install webkit2png
 brew install zopfli
 
 #DS
+brew install csvkit
 brew install direnv
 brew install gdal
 brew install geos
