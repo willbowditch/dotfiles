@@ -1,6 +1,10 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# gclou
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+
 # Use antigen package man. for zsh
 source /usr/local/share/antigen/antigen.zsh
 
@@ -17,6 +21,8 @@ antigen bundle command-not-found
 antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle docker-compose
 antigen bundle docker
+#antigen bundle zsh-users/zsh-autosuggestions
+#antigen bundle zsh-user/zsh-completions
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
@@ -186,9 +192,9 @@ eval "$(direnv hook zsh)"
 
 export PATH=/Users/willbowditch/Library/Python/3.6/bin:$PATH
 
-# gclou
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+
 
 # added by travis gem
 [ -f /Users/willbowditch/.travis/travis.sh ] && source /Users/willbowditch/.travis/travis.sh
+
+eval $(thefuck --alias)
