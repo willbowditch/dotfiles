@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Make vim the default editor.
-export EDITOR='vim';
+export EDITOR='nano';
 
 # Enable persistent REPL history for `node`.
 export NODE_REPL_HISTORY=~/.node_history;
@@ -32,3 +32,8 @@ export MANPAGER='less -X';
 # Avoid issues with `gpg` as installed via Homebrew.
 # https://stackoverflow.com/a/42265848/96656
 export GPG_TTY=$(tty);
+
+# Spark issues
+export SPARK_HOME=/usr/local/Cellar/apache-spark/2.3.1/libexec
+export PYTHONPATH=/usr/local/Cellar/apache-spark/2.3.1/libexec/python:/usr/local/bin//python3
+export PATH="/usr/local/opt/scala@2.11/bin:$PATH"
