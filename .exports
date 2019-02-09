@@ -34,6 +34,8 @@ export MANPAGER='less -X';
 export GPG_TTY=$(tty);
 
 # Spark issues
-export SPARK_HOME=/usr/local/Cellar/apache-spark/2.3.1/libexec
-export PYTHONPATH=/usr/local/Cellar/apache-spark/2.3.1/libexec/python:/usr/local/bin//python3
+export SPARK_HOME=/usr/local/Cellar/apache-spark/2.3.2/libexec
+export PYTHONPATH=/usr/local/Cellar/apache-spark/2.3.2/libexec/python:/usr/local/bin//python3
 export PATH="/usr/local/opt/scala@2.11/bin:$PATH"
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export PATH=$PATH:~/go/bin/
