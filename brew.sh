@@ -88,9 +88,8 @@ brew install openblas
 brew install opencv
 brew install pinentry-mac
 brew install protobuf
-brew install python
-brew install python3
-brew install r
+brew install pyenv
+brew install pipenv
 
 # Web stuff
 brew install yarn
@@ -119,6 +118,9 @@ brew cask install time-out
 brew cask install typora
 brew cask install vlc
 brew cask install whatsapp
+brew cask install brave-browser
+brew cask install r-app
+brew cask install intellij-idea-ce
 
 # Node stuff
 yarn global add eslint

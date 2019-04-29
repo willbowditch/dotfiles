@@ -21,8 +21,10 @@ antigen bundle command-not-found
 antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle docker-compose
 antigen bundle docker
-#antigen bundle zsh-users/zsh-autosuggestions
-#antigen bundle zsh-user/zsh-completions
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-user/zsh-completions
+antigen bundle voronkovich/gitignore.plugin.zsh
+antigen bundle popstas/zsh-command-time
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
@@ -198,3 +200,10 @@ export PATH=/Users/willbowditch/Library/Python/3.6/bin:$PATH
 [ -f /Users/willbowditch/.travis/travis.sh ] && source /Users/willbowditch/.travis/travis.sh
 
 eval $(thefuck --alias)
+
+export PATH="/usr/local/opt/node@6/bin:$PATH"
+
+# pyenv
+eval "$(pyenv init -)"
+export PATH="/usr/local/opt/gettext/bin:$PATH"
+source /usr/local/share/zsh/site-functions/pyenv.zsh
