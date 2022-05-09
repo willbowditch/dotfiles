@@ -2,6 +2,7 @@
 
 # Make vim the default editor.
 export EDITOR='nano';
+export SHELL='zsh';
 
 # Enable persistent REPL history for `node`.
 export NODE_REPL_HISTORY=~/.node_history;
@@ -35,7 +36,24 @@ export GPG_TTY=$(tty);
 
 # Spark issues
 export SPARK_HOME=/usr/local/Cellar/apache-spark/2.3.2/libexec
-export PYTHONPATH=/usr/local/Cellar/apache-spark/2.3.2/libexec/python:/usr/local/bin//python3
+#export PYTHONPATH=/usr/local/Cellar/apache-spark/2.3.2/libexec/python:/usr/local/bin//python3
 export PATH="/usr/local/opt/scala@2.11/bin:$PATH"
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export PATH=$PATH:~/go/bin/
+
+
+# PipX set version, otherwise it will keep changing to the latest version from brew
+PIPX_DEFAULT_PYTHON=~/.pyenv/shims/python3.8
+
+# FZF defaults
+export FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --preview 'bat --color=always --style=header,grid --line-range :300 {}'"
+
+# GO
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
+# PIPENV
+export PIPENV_VENV_IN_PROJECT=True
+
+# POETRY
+export POETRY_VIRTUALENVS_IN_PROJECT=true

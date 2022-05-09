@@ -148,3 +148,16 @@ alias pyclean="rm **/__pycache__ -r; rm **/.cache -r"
 
 alias fuz="fzf --preview 'head -100 {}'"
 alias fuzcon="ggrep --line-buffered --color=never -r '' * | fzf"
+
+alias trailing_whitespace="sed -i 's/[ \t]*$//'"
+
+alias lg="lazygit"
+
+alias upall="brew update && brew upgrade && brew upgrade --cask && zplug update && zplug update"
+
+alias fixmouse="killall LogiMgrDaemon && blueutil -p 0 && blueutil -p 1"
+alias fixcam="uhubctl -a cycle -s Camera"
+
+alias k=kubectl
+
+alias phone="scrcpy --turn-screen-off --stay-awake"
